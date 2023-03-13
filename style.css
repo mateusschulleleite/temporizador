@@ -1,0 +1,125 @@
+@font-face {
+    font-family: Relogio;
+    src: url(assets/fontes/DS-DIGI.TTF);
+}
+
+body {
+    background-image: radial-gradient(circle, #f2e700, #ff9100, #ff004e, #f800a3, #0a00f2);
+    height: 100vh;
+    font-family: Relogio;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.relogio__tela {
+    display: flex;
+    animation: sublinhado 1s;
+}
+
+.relogio {
+    font-size: 250px;
+    color: white;
+}
+
+.horas::after, .minutos::after {
+    content: ':';
+}
+
+.formulario {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 58.1%;
+}
+
+.formulario__input {
+    border: none;
+    height: 35px;
+    width: 25%;
+    margin-right: 1em;
+    padding-left: 1em;
+}
+
+.formulario__input::placeholder {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.formulario__botao {
+    box-sizing: border-box;
+    border: none;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #0a00f2;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: 500ms;
+}
+
+.formulario__botao:hover {
+    background-color: #f2e700;
+    color: black;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+.botao__zerar {
+    box-sizing: border-box;
+    border: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    background-color: #0a00f2;
+    color: #FFFFFF;
+    font-weight: bold;
+    transition: 500ms;
+    width: 58.1%;
+    height: 50px;
+    margin: 1em;
+}
+
+.botao__zerar:hover {
+    background-color: #f2e700;
+    color: black;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .relogio {
+        font-size: 100px;
+    }
+
+    .formulario {
+        flex-direction: column;
+        width: 330px;
+    }
+
+    .formulario__input {
+        height: 30px;
+        width: 100%;
+        box-sizing: border-box;
+        margin-bottom: 0.5em;
+        padding-left: 1em;
+    }
+
+    .formulario__input::placeholder {
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 10px;
+    }
+
+    .formulario__botao {
+        height: 30px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    .botao__zerar {
+        font-size: 10px;
+        width: 331px;
+        height: 30px;
+    }
+}
